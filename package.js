@@ -1,13 +1,12 @@
 Package.describe({
-  summary: "JSON.stringify with keys in sorted order"
+  summary: "stringify JSON objects with keys in sorted order"
 });
 
 Package.on_use(function(api) {
-  api.use(['coffeescript']);
-  return api.add_files('stringify.coffee', ['client', 'server']);
+  return api.add_files('stringify.js', ['client', 'server']);
 });
 
 Package.on_test(function(api) {
-  api.use('canonical-stringify');
-  return api.add_files('stringify_tests.coffee', ['client', 'server']);
+  api.use(['coffeescript', 'canonical-stringify']);
+  return api.add_files('stringify-tests.coffee', ['client', 'server']);
 });

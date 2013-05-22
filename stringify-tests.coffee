@@ -1,3 +1,5 @@
+{canonicalStringify} = awwx
+
 Tinytest.add 'canonical-stringify', (test) ->
   test.equal canonicalStringify({a: 1, b: 2}), '{"a":1,"b":2}'
   test.equal canonicalStringify({b: 2, a: 1}), '{"a":1,"b":2}'
@@ -10,6 +12,8 @@ Tinytest.add 'canonical-stringify', (test) ->
     ),
     '[true,{"a":"baz","b":[1,{"x":"foo","y":"bar"},2]},null]'
   )
+
+  test.equal(canonicalStringify(null), "null")
 
   test.equal(
     canonicalStringify(
@@ -25,8 +29,7 @@ Tinytest.add 'canonical-stringify', (test) ->
     """
   )
 
-  # Our algorithm relies on JSON.stringify serializing keys in object
-  # key order... try a large number of keys to trigger a large hash
+  # Try a large number of keys to trigger a large hash
   # algorithm if some environment is doing something different with
   # small objects vs. large objects.
 
