@@ -7,6 +7,11 @@ Package.on_use(function(api) {
 });
 
 Package.on_test(function(api) {
-  api.use(['coffeescript', 'canonical-stringify']);
+  api.use([
+    'canonical-stringify',
+    'coffeescript',
+    'random',
+    'tinytest'
+  ]);
   return api.add_files('stringify-tests.coffee', ['client', 'server']);
 });

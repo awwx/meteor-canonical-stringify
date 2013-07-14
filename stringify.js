@@ -174,6 +174,7 @@ function stringify(value, replacer, space) {
             return str('', {'': value});
         }
 
-if (typeof awwx === 'undefined')
-  this.awwx = {};
-awwx.canonicalStringify = stringify;
+
+// @export canonicalStringify
+
+canonicalStringify = stringify;
