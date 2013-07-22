@@ -1,4 +1,4 @@
-stringify = canonicalStringify ? awwx.canonicalStringify
+stringify = canonicalStringify
 
 Tinytest.add 'canonical-stringify', (test) ->
   test.equal stringify({a: 1, b: 2}), '{"a":1,"b":2}'
