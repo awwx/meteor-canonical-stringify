@@ -3,7 +3,8 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
-  return api.add_files('stringify.js', ['client', 'server']);
+  api.export('stringify', ['client', 'server']);
+  api.add_files('stringify.js', ['client', 'server']);
 });
 
 Package.on_test(function(api) {
@@ -13,5 +14,5 @@ Package.on_test(function(api) {
     'random',
     'tinytest'
   ]);
-  return api.add_files('stringify-tests.coffee', ['client', 'server']);
+  api.add_files('stringify-tests.coffee', ['client', 'server']);
 });

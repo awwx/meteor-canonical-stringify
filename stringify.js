@@ -1,3 +1,13 @@
+// Based on json2.js from https://github.com/douglascrockford/JSON-js
+//
+//    json2.js
+//    2012-10-08
+//
+//    Public Domain.
+//
+//    NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+
+
 function quote(string) {
   return JSON.stringify(string);
 }
@@ -130,9 +140,8 @@ function str(key, holder) {
     }
 }
 
-// If the JSON object does not yet have a stringify method, give it one.
 
-function stringify(value, replacer, space) {
+stringify = function (value, replacer, space) {
 
 // The stringify method takes a value and an optional replacer, and an optional
 // space parameter, and returns a JSON text. The replacer can be a function
@@ -165,7 +174,7 @@ function stringify(value, replacer, space) {
             if (replacer && typeof replacer !== 'function' &&
                     (typeof replacer !== 'object' ||
                     typeof replacer.length !== 'number')) {
-                throw new Error('JSON.stringify');
+                throw new Error('stringify');
             }
 
 // Make a fake root object containing our value under the key of ''.
@@ -173,8 +182,3 @@ function stringify(value, replacer, space) {
 
             return str('', {'': value});
         }
-
-
-// @export canonicalStringify
-
-canonicalStringify = stringify;

@@ -1,5 +1,3 @@
-stringify = canonicalStringify
-
 Tinytest.add 'canonical-stringify', (test) ->
   test.equal stringify({a: 1, b: 2}), '{"a":1,"b":2}'
   test.equal stringify({b: 2, a: 1}), '{"a":1,"b":2}'
@@ -33,7 +31,7 @@ Tinytest.add 'canonical-stringify', (test) ->
   # algorithm if some environment is doing something different with
   # small objects vs. large objects.
 
-  random = if Random.create? then Random.create(0) else Random
+  random = Random.create(0)
 
   nKeys = 1000
   keys = []
