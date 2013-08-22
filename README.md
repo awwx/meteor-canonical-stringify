@@ -30,9 +30,8 @@ Supports Meteor 0.6.5 and later.
 ## Support
 
 If you find this package useful,
-[donate](https://www.gittip.com/awwx/) to support its ongoing
-maintenance and development... and avoid the dreaded **dead package
-syndrome**!  :-)
+[support](https://www.gittip.com/awwx/) its ongoing maintenance and
+development... and avoid the dreaded **dead package syndrome**!  :-)
 
 Not sure what to give? While the amount is entirely up to you, a
 weekly contribution of $1 is useful if you're relying on this package
