@@ -39,4 +39,8 @@ weekly contribution of $1 is useful if you're relying on this package
 for something important.  25&cent; is a cool amount for a personal
 contribution.
 
+Help build an ecosystem of well maintained, quality Meteor packages by
+joining the
+[Gittip Meteor Community](https://www.gittip.com/for/meteor/).
+
 Thank you!
