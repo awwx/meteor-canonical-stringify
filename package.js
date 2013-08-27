@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
+  api.use('underscore', ['client', 'server']);
   api.export('stringify', ['client', 'server']);
   api.add_files('stringify.js', ['client', 'server']);
 });

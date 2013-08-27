@@ -22,7 +22,7 @@ This allows objects to be used as keys:
 
 ## Version
 
-1.2
+1.3
 
 Supports Meteor 0.6.5 and later.
 
